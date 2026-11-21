@@ -52,3 +52,15 @@ footer{color:#91a5b6}
 .public-footer{display:grid;gap:7px;text-align:center;padding:24px 16px 20px;background:#fff;border-top:1px solid #e6eef5;color:#526f85;font-size:13px;line-height:1.8}
 .public-footer small{margin-top:6px;color:#96a8b6;font-size:11px}
 @media(max-width:600px){.school-banner img{max-height:none;width:100%;object-fit:contain}.public-footer{font-size:12px;padding:20px 12px}}
+
+/* Compact school banner and single-row public credits */
+.school-banner{padding:5px 16px}
+.school-banner img{width:100%;height:118px;max-height:118px;object-fit:contain}
+.public-footer{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:center;column-gap:26px;row-gap:8px;padding:18px 16px}
+.public-footer>div{white-space:nowrap}
+.public-footer small{flex-basis:100%;margin-top:2px}
+@media(max-width:700px){
+  .school-banner img{height:90px;max-height:90px}
+  .public-footer{column-gap:14px;font-size:11px}
+  .public-footer>div{white-space:normal}
+}
