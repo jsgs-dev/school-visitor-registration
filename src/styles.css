@@ -45,3 +45,10 @@ td{border-bottom-color:#edf2f7}
 footer{color:#91a5b6}
 @media(max-width:800px){.visitor{gap:15px;margin-top:20px}.intro{padding:20px 8px}.intro h1{font-size:44px}}
 @media(max-width:560px){.panel{padding:23px 18px;border-radius:18px}.intro h1{font-size:37px}.perks span{width:100%;font-size:12px}.topnav{gap:8px}.topnav .link{font-size:10px}.visitor>.panel{margin-bottom:12px}}
+
+/* School identity banner and public-site credits */
+.school-banner{width:100%;background:#fff;display:flex;justify-content:center;align-items:center;border-bottom:1px solid #e7edf2;overflow:hidden}
+.school-banner img{display:block;width:100%;height:auto;max-height:190px;object-fit:contain;object-position:center}
+.public-footer{display:grid;gap:7px;text-align:center;padding:24px 16px 20px;background:#fff;border-top:1px solid #e6eef5;color:#526f85;font-size:13px;line-height:1.8}
+.public-footer small{margin-top:6px;color:#96a8b6;font-size:11px}
+@media(max-width:600px){.school-banner img{max-height:none;width:100%;object-fit:contain}.public-footer{font-size:12px;padding:20px 12px}}
