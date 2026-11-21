@@ -61,7 +61,7 @@ declare
  matched_ids uuid[];
  matched_count integer;
 begin
- normalized_names := regexp_replace(lower(trim(coalesce(p_first_three_names,''))), '\\s+', ' ', 'g');
+ normalized_names := regexp_replace(lower(trim(coalesce(p_first_three_names,''))), '\s+', ' ', 'g');
  if normalized_names = '' then return 'not_found'; end if;
 
  select array_agg(v.id), count(*)::integer
@@ -69,9 +69,9 @@ begin
  from public.visitor_records v
  where v.departed_at is null
  and (
-   split_part(regexp_replace(lower(trim(v.full_name)), '\\s+', ' ', 'g'),' ',1) || ' ' ||
-   split_part(regexp_replace(lower(trim(v.full_name)), '\\s+', ' ', 'g'),' ',2) || ' ' ||
-   split_part(regexp_replace(lower(trim(v.full_name)), '\\s+', ' ', 'g'),' ',3)
+   split_part(regexp_replace(lower(trim(v.full_name)), '\s+', ' ', 'g'),' ',1) || ' ' ||
+   split_part(regexp_replace(lower(trim(v.full_name)), '\s+', ' ', 'g'),' ',2) || ' ' ||
+   split_part(regexp_replace(lower(trim(v.full_name)), '\s+', ' ', 'g'),' ',3)
  ) = normalized_names
  and (p_position is null or trim(p_position) = '' or lower(trim(v.position)) = lower(trim(p_position)));
 
